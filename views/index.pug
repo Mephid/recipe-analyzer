@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Recipe Analizer
+        link(rel="stylesheet", type="text/css", href="/style.css")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous")
+    body
+        header
+            h1 Recipe Analizer
+        .app
+            .app-container
+                section.add-ingredient
+                    .container
+                        .add-ingredient-form
+                            form(action="/add_ingredient" method="POST")
+                                input(type="text" class="text-input" name="ingredient" placeholder="Enter ingredient...")
+                                input(type="submit" class="submit-button btn" value="ADD")        
+                    if ingredientError
+                        p.ingr-err Please, enter a valid ingredient (e.g. 1l milk)
+                    else
+                        p.ingr-tip e.g. 100g potatoes
+                section.ingredient-list
+                    .container                          
+                        h3.title Ingredient list
+                        .list
+                            ul.ingr-ul
+                                if ingr        
+                                    each elem, i in ingr
+                                        li 
+                                            p #{elem}
+                                            a(href="/delete/" + i class="remove")
+                                                i.fas.fa-times
+                            .buttons
+                                a(href="/clear_list" class="clear-list btn") CLEAR
+                                a(href="/submit_recipe" class="submit-recipe btn") ANALYZE
+                section.recipe-stats
+                    .container
+                        if totalNutrients
+                            h3.title Recipe statistics
+                            .flex-stats
+                                .total-stats
+                                    h4 Total
+                                    ul
+                                        each val, key in totalNutrients
+                                            if val
+                                                li.stat-item 
+                                                    span.key #{key}
+                                                    span #{val}
+                                            else
+                                                li.stat-item 
+                                                    span.key #{key}
+                                                    span 0g
+                                .per-100
+                                    h4 Per 100g
+                                    ul
+                                        each val, key in totalNutrients
+                                            if val
+                                                li.stat-item 
+                                                    span.key #{key}
+                                                    span #{Math.round((parseInt(val) / Number(weight)) * 100)}#{String(val).match(/[a-z]+/)[0]}
+                                            else
+                                                li.stat-item 
+                                                    span.key #{key}
+                                                    span 0g
+        footer
+            .powered-by
+                #edamam-badge(data-color="badge")
+        script(src="https://developer.edamam.com/attribution/badge.js")

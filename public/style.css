@@ -1,0 +1,294 @@
+/* Global var */
+*, 
+*::before,
+*::after {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: #fafafa;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 400;  
+    margin-bottom: 1rem;  
+}
+
+h4 {
+    font-size:  1.6rem;
+    letter-spacing: 0.25px;
+    font-weight: 500;
+}
+
+li {
+    list-style: none;
+    font-family: Arial, sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+.btn {
+    font-size: 1.4rem;
+    letter-spacing: 1.25px;
+    font-weight: 300;
+    outline: none;    
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+.container {
+    margin-bottom: 3rem;
+}
+
+
+
+/* App container */
+
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.app-container {
+    max-width: 768px;
+    width: 100%;
+    padding: 2rem 2rem;
+}
+
+
+
+/* header */
+
+header {
+    padding: 2rem 0 0.5rem 3rem;
+    color: #202124;
+    border-top: 3px solid #2ea317;
+}
+
+
+
+/* Add ingredient component */
+
+.add-ingredient > .container {
+    border-radius: 50px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: white;
+}
+
+.add-ingredient-form > form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.text-input {
+    outline: none;
+    border: none;
+    background: none;
+    width:100%;
+    margin-right: 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 0 1rem;
+}
+
+.submit-button {
+    background: none;
+    border: none;
+    color:white;
+    background-color: #2ea317;
+}
+
+.submit-button:hover {    
+    background-color: #47bd2f;
+}
+
+
+
+/* Ingredient list */
+
+.ingredient-list > .container{
+    display: flex;
+    flex-direction: column;
+}
+
+.container > .list {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: white;
+}
+
+.ingr-ul {
+    display: flex;
+    justify-content: flex-start;    
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #dfe1e5;
+    padding-bottom: 1rem;
+}
+
+.ingr-ul > li {  
+    margin: 0 1rem 1rem 0;    
+    border-radius: 5px;
+    display: flex;
+    background-color: #efefef;
+}
+
+.ingr-ul > li > p {
+    padding: 1.5rem 0 1.5rem 2rem;
+}
+
+.ingr-ul > li > a {
+    padding: 1rem 2rem;
+}
+
+.fas.fa-times {
+    font-size: 2.5rem;
+    color: rgb(179, 49, 49);
+}
+
+.fas.fa-times:hover {
+    color: rgb(212, 74, 74);
+}
+
+.buttons {
+    align-self: flex-end;
+    margin: 1rem 0.5rem;
+}
+
+.clear-list {
+    color: #da2a2a;
+    font-weight: 400;
+    margin-right: 2rem;
+}
+
+.clear-list:hover {
+    background-color: rgb(255, 227, 223);
+}
+
+.submit-recipe {
+    color: #278813;
+    border: 2px solid#2ea317;
+    font-weight: 500;
+    padding: 0.8rem 1.8rem;
+}
+
+.submit-recipe:hover {
+    color: white;
+    background-color:  #2ea317;
+}
+
+
+
+/* Recipe stats */
+
+.flex-stats {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));    
+    row-gap: 3rem;
+    column-gap: 3rem;
+}
+
+.flex-stats > * {
+    border-radius: 10px;
+    padding-top: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: white;
+}
+
+.flex-stats > * > h4 {
+    margin: .5rem 2rem 1rem 2rem
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem 2rem;
+    border-top: 1px solid #dfe1e5;
+}
+
+.stat-item:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: #f7f7f7;
+}
+
+.stat-item:nth-last-child(1):hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: #f7f7f7;
+    border-radius: 0 0 10px 10px;
+}
+
+.key {
+    font-weight: bold;
+    color: #202124;
+}
+
+/* Single selectors stats */
+.stat-item:nth-child(3) > .key,
+.stat-item:nth-child(4) > .key,
+.stat-item:nth-child(8) > .key,
+.stat-item:nth-child(9) > .key {
+    font-weight: normal;
+    padding-left: 3rem;
+}
+
+
+
+/* footer */
+.powered-by {
+    text-align: right;
+}
+
+
+
+/* Errors & tip*/
+.ingr-err {
+    transform: translate(2.5rem, -2.5rem);
+    font-size: 1.4rem;
+    color: #DA2a2a;
+}
+
+.ingr-tip {
+    transform: translate(2.5rem, -2.5rem);
+    font-size: 1.4rem;
+    color: #8a8a8a;
+}
