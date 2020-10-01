@@ -48,11 +48,11 @@ html(lang="en")
                                             if val
                                                 li.stat-item 
                                                     span.key #{key}
-                                                    span #{val}
+                                                    span.val #{val}
                                             else
                                                 li.stat-item 
                                                     span.key #{key}
-                                                    span 0g
+                                                    span.val 0g
                                 .per-100
                                     h4 Per 100g
                                     ul
@@ -60,11 +60,11 @@ html(lang="en")
                                             if val
                                                 li.stat-item 
                                                     span.key #{key}
-                                                    span #{Math.round((parseInt(val) / Number(weight)) * 100)}#{String(val).match(/[a-z]+/)[0]}
+                                                    span.val #{Math.round((parseInt(val) / Number(weight)) * 100)}#{String(val).match(/[a-z]+/)[0]}
                                             else
                                                 li.stat-item 
                                                     span.key #{key}
-                                                    span 0g
+                                                    span.val 0g
         footer
             .powered-by
                 #edamam-badge(data-color="badge")

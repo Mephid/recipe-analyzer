@@ -24,11 +24,13 @@ a {
 }
 
 html {
+    height: 100vh;
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
 }
 
 body {
+    height: 100vh;
     width: 100%;
     background-color: #fafafa;
 }
@@ -41,7 +43,7 @@ a {
 h1 {
     font-size: 2.5rem;
     font-weight: 500;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.1px;
 }
 
 h3 {
@@ -51,8 +53,8 @@ h3 {
 }
 
 h4 {
-    font-size:  1.6rem;
-    letter-spacing: 0.25px;
+    font-size:  1.8rem;
+    letter-spacing: 0.5px;
     font-weight: 500;
 }
 
@@ -83,15 +85,16 @@ li {
 /* App container */
 
 .app {
+    min-height: calc(100% - 12rem);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: flex-start;
+        -ms-flex-pack: flex-start;
+            justify-content: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -101,7 +104,7 @@ li {
 .app-container {
     max-width: 768px;
     width: 100%;
-    padding: 2rem 2rem;
+    padding: 3rem 2rem 0;
 }
 
 
@@ -109,9 +112,9 @@ li {
 /* header */
 
 header {
-    padding: 2rem 0 0.5rem 3rem;
-    color: #202124;
-    border-top: 3px solid #2ea317;
+    padding: 1rem 0 1rem 3rem;
+    color: white;
+    background-color: #1D800E;
 }
 
 
@@ -153,11 +156,11 @@ header {
     background: none;
     border: none;
     color:white;
-    background-color: #2ea317;
+    background-color: #06A10B;
 }
 
 .submit-button:hover {    
-    background-color: #47bd2f;
+    background-color: #46CB18;
 }
 
 
@@ -246,15 +249,15 @@ header {
 }
 
 .submit-recipe {
-    color: #278813;
-    border: 2px solid#2ea317;
+    color: #058809;
+    border: 2px solid#06A10B;
     font-weight: 500;
     padding: 0.8rem 1.8rem;
 }
 
 .submit-recipe:hover {
     color: white;
-    background-color:  #2ea317;
+    background-color:  #06A10B;
 }
 
 
@@ -277,11 +280,13 @@ header {
     padding-top: 1rem;
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    background-color: white;
+    background-color: #1D800E;
+    border: 2px solid #1D800E;
+    color: white;
 }
 
 .flex-stats > * > h4 {
-    margin: .5rem 2rem 1rem 2rem
+    margin: .5rem 2rem 1rem 2rem    
 }
 
 .stat-item {
@@ -295,7 +300,12 @@ header {
         -ms-flex-align: end;
             align-items: flex-end;
     padding: 1rem 2rem;
+    background-color: white;
     border-top: 1px solid #dfe1e5;
+}
+
+.stat-item:nth-last-child(1) {    
+    border-radius: 0 0 10px 10px;
 }
 
 .stat-item:hover {
@@ -316,6 +326,10 @@ header {
     color: #202124;
 }
 
+.val {
+    color: black;
+}
+
 /* Single selectors stats */
 .stat-item:nth-child(3) > .key,
 .stat-item:nth-child(4) > .key,
@@ -328,14 +342,10 @@ header {
 
 
 /* footer */
-footer {
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
 .powered-by {
-    text-align: right;
+    text-align: center;
 }
+
 
 
 
