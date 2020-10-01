@@ -85,7 +85,7 @@ li {
 /* App container */
 
 .app {
-    min-height: calc(100% - 12rem);
+    min-height: calc(100vh - 10rem);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
