@@ -328,6 +328,11 @@ header {
 
 
 /* footer */
+footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
 .powered-by {
     text-align: right;
 }
