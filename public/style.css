@@ -41,7 +41,7 @@ a {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: 500;
     letter-spacing: -0.1px;
 }
@@ -85,7 +85,7 @@ li {
 /* App container */
 
 .app {
-    min-height: calc(100vh - 10rem);
+    min-height: calc(100vh - 10.5rem);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -112,9 +112,11 @@ li {
 /* header */
 
 header {
-    padding: 1rem 0 1rem 3rem;
-    color: white;
-    background-color: #1D800E;
+    padding: 1.5rem 0 1.5rem 3rem;
+    background-color: white;
+    color:  #2a2a2a;
+    border-bottom: 3px solid #06A10B;
+    
 }
 
 
@@ -212,8 +214,15 @@ header {
     border-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    background-color: #efefef;
+    display: flex;    
+    border: 1px solid #dfe1e5;
+}
+
+.ingr-ul > li:hover {
+    margin: 0.1rem 1.1rem 1.1rem 0.1rem;    
+    border: none;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .ingr-ul > li > p {
