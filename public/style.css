@@ -351,6 +351,7 @@ header {
 
 /* Errors & tip*/
 .ingr-err {
+    width: 220px;
     -webkit-transform: translate(2.5rem, -2.5rem);
         -ms-transform: translate(2.5rem, -2.5rem);
             transform: translate(2.5rem, -2.5rem);
@@ -359,6 +360,7 @@ header {
 }
 
 .ingr-tip {
+    width: 220px;
     -webkit-transform: translate(2.5rem, -2.5rem);
         -ms-transform: translate(2.5rem, -2.5rem);
             transform: translate(2.5rem, -2.5rem);
