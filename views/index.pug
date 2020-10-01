@@ -16,7 +16,7 @@ html(lang="en")
                     .container
                         .add-ingredient-form
                             form(action="/add_ingredient" method="POST")
-                                input(type="text" class="text-input" name="ingredient" placeholder="Enter ingredient...")
+                                input(type="text" class="text-input" name="ingredient" autocomplete="off" placeholder="Enter ingredient...")
                                 input(type="submit" class="submit-button btn" value="ADD")        
                     if ingredientError
                         p.ingr-err Please, enter a valid ingredient (e.g. 1l milk)

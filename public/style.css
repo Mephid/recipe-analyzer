@@ -187,8 +187,9 @@ header {
             flex-direction: column;
     border-radius: 10px;
     padding: 2rem;
-    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border: 1px solid #dfe1e5;
+    /* -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
     background-color: white;
 }
 
@@ -220,7 +221,8 @@ header {
 }
 
 .ingr-ul > li > a {
-    padding: 1rem 2rem;
+    margin: 0.8rem 1.2rem;
+    padding: 0.2rem 0.8rem;
 }
 
 .fas.fa-times {
@@ -278,8 +280,8 @@ header {
 .flex-stats > * {
     border-radius: 10px;
     padding-top: 1rem;
-    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    /* -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
     background-color: #1D800E;
     border: 2px solid #1D800E;
     color: white;
